@@ -13,7 +13,7 @@ It's a web-based program so you would need the following:
 
 ### 📍 Using the application
 
-* Link to the application: [Real-Time Battery Level Indicator](https://dreamy-swirles-93aadb.netlify.app/)
+* Link to the application: [Simple Car Game/Animation](https://dreamy-swirles-93aadb.netlify.app/)
 * Or you can view the program from my portfolio: [My Portfolio](https://saimcode.github.io/myportfolio/)
 
 ## ❔ Help
