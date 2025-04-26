@@ -12,9 +12,9 @@ body {
 
 /* Car and Scenery */
 .night {
-    height: 83vh;
-    width: 73vw;
-    margin: 6rem auto;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
     background: url('Scenery 1.jpg');
     background-size: cover;
     position: relative;
