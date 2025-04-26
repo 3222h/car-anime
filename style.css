@@ -44,6 +44,7 @@ body {
     position: absolute;
     bottom: 2%;
     left: 45%;
+    transform: translateX(-50%);
 }
 
 .moveRight {
