@@ -32,9 +32,9 @@ body {
     bottom: 0%;
     left: 0%;
     background-repeat: repeat-x;
-    animation: road 5s linear infinite;
+    animation: surface 5s linear infinite;
 }
-@keyframes road {
+@keyframes surface {
     0% { background-position-x: 0; }
     100% { background-position-x: -1000px; } /* or adjust to match your image width */
 }
