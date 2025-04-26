@@ -32,7 +32,7 @@ body {
     bottom: 0%;
     left: 0%;
     background-repeat: repeat-x;
-    animation: surface 5s linear infinite;
+    animation: surface 6s linear infinite;
 }
 @keyframes surface {
     0% { background-position-x: 0; }
