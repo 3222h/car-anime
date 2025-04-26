@@ -36,7 +36,7 @@ body {
 }
 @keyframes surface {
     0% { background-position-x: 0; }
-    100% { background-position-x: -1000px; } /* or adjust to match your image width */
+    100% { background-position-x: -2950px; } /* or adjust to match your image width */
 }
 
 
