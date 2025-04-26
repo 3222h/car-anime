@@ -22,6 +22,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .surface {
     height: 200px;
     width: 500%;
@@ -32,6 +33,10 @@ body {
     left: 0%;
     background-repeat: repeat-x;
     animation: road 5s linear infinite;
+}
+@keyframes road {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1000px; } /* or adjust to match your image width */
 }
 
 
