@@ -17,7 +17,7 @@ body {
     margin: 6rem auto;
     background: url('Scenery 1.jpg');
     background-size: cover;
-    position: relative;
+    position: absolute;
     box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
     overflow-x: hidden;
 }
@@ -43,7 +43,7 @@ body {
 .car {
     position: absolute;
     bottom: 2%;
-    left: 24%;
+    left: 45%;
 }
 
 .moveRight {
