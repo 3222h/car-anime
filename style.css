@@ -24,18 +24,16 @@ body {
 
 .surface {
     height: 200px;
-    width: 100%;
-    background: url('Mountain 1.png') repeat-x;
+    width: 500%;
+    background: url('Mountain 1.png');
+    display: block;
     position: absolute; 
-    bottom: 0;
-    left: 0;
-    animation: backgroundMove 5s linear infinite;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: road 5s linear infinite;
 }
 
-@keyframes backgroundMove {
-    0% { background-position: 0 0; }
-    100% { background-position: -1000px 0; }
-}
 
 .car {
     position: absolute;
