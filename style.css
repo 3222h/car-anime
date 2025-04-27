@@ -45,8 +45,7 @@ body {
 .car {
     position: absolute;
     bottom: 2%;
-    left: 40%;
-    background-position: center;
+    left: 45%;
 }
 
 .moveRight {
