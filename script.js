@@ -1,29 +1,55 @@
 $(document).ready(function(){
 
-    const $surface = $('.surface');
-    const $car = $('.car');
-    const $img = $('.car img');
-
-    const cars = ['./Car 1.PNG', './Car 2.PNG'];
-
+    //Variables
+    $surface =$('.surface');
+    $car =$('.car');
+    $img = $('.car img');
     let flag = true;
 
-    // Start car automatically
-    $surface.addClass('moveRight');
-    $car.addClass('suspension');
+const cars = ['./Car 1.PNG','./Car 2.PNG']
 
-    // Function to randomly toggle lights ON/OFF every 2-3 minutes
-    function toggleLightsRandomly() {
-        setTimeout(() => {
+        //keypress event
+    $(document).on('keypress',function(e){
+        if(e.which == 13){
+            $($surface).toggleClass('moveRight');
+            $($car).toggleClass('suspension');
+        }
+    })
+
+    $(document).on('keypress',function(e){
+        if(e.which == 119){
             if(flag){
-                $img.attr('src', cars[1]); // lights ON (car 2)
-            } else {
-                $img.attr('src', cars[0]); // lights OFF (car 1)
+                flag = false;
+                $img.attr('src', cars[0]);
+            }else{
+                flag = true;
+                $img.attr('src', cars[1]);
             }
-            flag = !flag;
-            toggleLightsRandomly(); // call again
-        }, Math.floor(Math.random() * (180000 - 120000 + 1)) + 120000); // Random between 2min(120000ms) - 3min(180000ms)
-    }
-
-    toggleLightsRandomly(); // Start the light toggle
+        }
+    })
+    
 });
+
+
+// Typewriting Effect //
+const text = ['car animation', 'car animation', 'car animation']
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type(){
+    if(count === text.length){
+        count = 0;
+    }
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector('.typing').textContent = letter;
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+    }
+    setTimeout(type, 400);
+    
+}());
