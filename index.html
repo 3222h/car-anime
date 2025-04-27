@@ -116,6 +116,24 @@ setInterval(() => {
   score++;
   scoreElement.textContent = `Score: ${score}`;
 }, 1000);
+
+// Function to change the background image randomly between 2 and 3 minutes
+function switchBackground() {
+  const backgrounds = [
+    'https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Scenery%201.jpg',
+    'https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Scenery%202.png'
+  ];
+  
+  // Randomly choose between the two backgrounds
+  const randomIndex = Math.floor(Math.random() * backgrounds.length);
+  document.body.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
+
+  // Set the next background change interval (between 2 and 3 minutes)
+  setTimeout(switchBackground, Math.floor(Math.random() * (180000 - 120000 + 1)) + 120000);
+}
+
+// Start the first background switch
+switchBackground();
 </script>
 
 </body>
