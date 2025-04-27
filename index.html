@@ -87,8 +87,13 @@ const carImages = [
 let currentCarIndex = 0;
 let score = 0;
 
-// Switch car every 30 seconds
-setInterval(() => {
+// Function to get a random interval between 30 and 40 seconds (30000ms to 40000ms)
+function getRandomInterval() {
+  return Math.floor(Math.random() * (40000 - 30000 + 1)) + 30000;
+}
+
+// Function to switch the car image
+function switchCar() {
   currentCarIndex = (currentCarIndex + 1) % carImages.length;
   car.src = carImages[currentCarIndex];
   
@@ -98,7 +103,13 @@ setInterval(() => {
   } else {
     car.classList.remove('large');  // Reset to default size for Car 1
   }
-}, 30000);
+
+  // Set the next car switch interval
+  setTimeout(switchCar, getRandomInterval());
+}
+
+// Start the first car switch
+switchCar();
 
 // Increase score every second
 setInterval(() => {
