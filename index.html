@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Animation with Score</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: url('https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Scenery%201.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .mountain {
+    position: absolute;
+    bottom: 0;
+    width: 1000%;
+    height: 200px;
+    background: url('https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Mountain%201.png') repeat-x;
+    background-size: contain;
+    animation: surface 6s linear infinite;
+    z-index: 1;
+  }
+
+  @keyframes surface {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -2950px; }
+  }
+
+  .car {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: auto;
+    animation: suspension 1s ease-in-out infinite;
+    transition: opacity 1s ease;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  @keyframes suspension {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -5px); }
+  }
+
+  .score {
+    position: absolute;
+    bottom: 220px; /* Place it just above the mountain */
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px #000; /* Glow effect for visibility */
+    z-index: 3;
+  }
+</style>
+</head>
+<body>
+
+<div class="mountain"></div>
+<div id="score" class="score">Score: 0</div>
+<img id="car" class="car" src="https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Car%201.PNG" alt="Car">
+
+<script>
+const car = document.getElementById('car');
+const scoreElement = document.getElementById('score');
+
+const carImages = [
+  'https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Car%201.PNG',
+  'https://raw.githubusercontent.com/3222h/car-anime/refs/heads/main/Car%202.PNG'
+];
+
+let currentCarIndex = 0;
+let score = 0;
+
+// Switch car every 30 seconds
+setInterval(() => {
+  currentCarIndex = (currentCarIndex + 1) % carImages.length;
+  car.src = carImages[currentCarIndex];
+}, 30000);
+
+// Increase score every second
+setInterval(() => {
+  score++;
+  scoreElement.textContent = `Score: ${score}`;
+}, 1000);
+</script>
+
+</body>
+</html>
