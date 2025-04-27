@@ -46,7 +46,7 @@ body {
     position: absolute;
     bottom: 2%;
     left: 50%;
-    right: 50%;
+    background-position: center;
 }
 
 .moveRight {
