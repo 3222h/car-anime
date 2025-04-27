@@ -25,18 +25,18 @@ body {
 
 .surface {
     height: 200px;
-    width: 100%;
-    background: url('Mountain 1.png') repeat-x center;
-    background-size: auto 100%;
+    width: 1000%;
+    background: url('Mountain 1.png');
+    display: block;
     position: absolute; 
-    bottom: 0;
-    left: 0;
-    animation: moveBackground 6s linear infinite;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: surface 6s linear infinite;
 }
-
-@keyframes moveBackground {
+@keyframes surface {
     0% { background-position-x: 0; }
-    100% { background-position-x: -500px; }
+    100% { background-position-x: -2950px; } /* or adjust to match your image width */
 }
 
 
